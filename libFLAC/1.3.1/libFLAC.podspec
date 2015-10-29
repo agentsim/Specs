@@ -49,10 +49,7 @@ s.source_files  = "src/libFLAC/**/*.{h,c}", "include/FLAC/*.h", "include/share/*
 s.public_header_files = "include/FLAC/*.h", "include/share/compat.h"
 s.exclude_files = "src/libFLAC/**/*ogg*", "src/libFLAC/*intrin*"
 
-s.pod_target_xcconfig = {   "USE_HEADERMAP" => "NO",
-                            "USER_HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/libFLAC/src/libFLAC/include" "$(PODS_ROOT)/libFLAC/include"',
-                            "HEADER_SEARCH_PATHS" => '"$(SDKROOT)/usr/include"' }
-
+s.pod_target_xcconfig = { "USE_HEADERMAP" => "NO", "USER_HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/libFLAC/src/libFLAC/include" "$(PODS_ROOT)/libFLAC/include"' }
 s.compiler_flags = '-DVERSION=\"1.3.1\"', '-DHAVE_SYS_PARAM_H=1', '-DHAVE_LROUND=1', '-Wno-unused-const-variable', '-Wno-shorten-64-to-32', '-Wno-unreachable-code-loop-increment'
 
 end
