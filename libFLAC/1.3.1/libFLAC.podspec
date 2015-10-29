@@ -49,7 +49,7 @@ s.source_files  = "src/libFLAC/**/*.{h,c}", "include/FLAC/*.h", "include/share/*
 s.public_header_files = "include/FLAC/*.h", "include/share/compat.h"
 s.exclude_files = "src/libFLAC/**/*ogg*", "src/libFLAC/*intrin*"
 
-s.pod_target_xcconfig = {   "HEADER_SEARCH_PATHS" => '',
+s.pod_target_xcconfig = {   "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/libFLAC/src/libFLAC/include",
                             "USE_HEADERMAP" => "NO",
                             "USER_HEADER_SEARCH_PATHS" => '"$(PODS_ROOT)/libFLAC/src/libFLAC/include" "$(PODS_ROOT)/libFLAC/include"' }
 
