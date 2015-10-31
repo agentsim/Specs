@@ -21,7 +21,7 @@ s.prepare_command = <<-CMD
 		sed -i soxr-config.h.bak s/\@HAVE_FENV_H\@/1/g soxr-config.h
 		sed -i soxr-config.h.bak s/\@HAVE_LRINT\@/1/g soxr-config.h
 		sed -i soxr-config.h.bak s/\@WORDS_BIGENDIAN\@/0/g soxr-config.h
-        sed -i .bak 's/.*PFFT_MACROS_ONLY.*/&\n#ifndef __arm__ #define __arm__ #endif/' src/simd-dev.h
+        sed -i .bak 's/.*PFFT_MACROS_ONLY.*/&'n'#ifndef __arm__ #define __arm__ #endif/' src/simd-dev.h
     CMD
 
 s.source_files  = "src/*.{h,c}", "soxr-config.h"
