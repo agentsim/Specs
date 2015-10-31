@@ -24,7 +24,7 @@ s.prepare_command = <<-CMD
 sed -i .bak 's/.*PFFT_MACROS_ONLY.*/&\
 #ifndef __arm__\
 #  define __arm__\
-#endif/' simd-dev.h
+#endif/' src/simd-dev.h
 CMD
 
 s.source_files  = "src/*.{h,c}", "soxr-config.h"
